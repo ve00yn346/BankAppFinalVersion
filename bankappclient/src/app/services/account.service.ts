@@ -10,8 +10,8 @@ import { TransferRequest } from '../model/transfer-request';
   providedIn: 'root'
 })
 export class AccountService {
-  private baseUrl = 'http://localhost:8090/bankapp/v1/accounts';
-   private baseUrl2 ='http://localhost:8090/bankapp/v1/transactions'
+  private baseUrl = '/bankapp/v1/accounts';
+   private baseUrl2 = '/bankapp/v1/transactions';
 
   constructor(private http: HttpClient) { }
 

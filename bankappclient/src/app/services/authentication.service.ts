@@ -6,7 +6,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private authUrl = 'http://localhost:8090/bankapp/authenticate';
+  private authUrl = '/bankapp/authenticate';
 
   constructor(private http: HttpClient) {}
 

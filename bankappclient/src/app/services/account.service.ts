@@ -5,13 +5,14 @@ import { Account } from '../model/account';
 import { DepositRequest } from '../model/deposit-request';
 import { WithdrawRequest } from '../model/withdraw-request';
 import { TransferRequest } from '../model/transfer-request';
+import { environment } from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  private baseUrl = '/bankapp/v1/accounts';
-   private baseUrl2 = '/bankapp/v1/transactions';
+  private baseUrl = `${environment.apiBaseUrl}/v1/accounts`;
+  private baseUrl2 = `${environment.apiBaseUrl}/v1/transactions`;
 
   constructor(private http: HttpClient) { }
 

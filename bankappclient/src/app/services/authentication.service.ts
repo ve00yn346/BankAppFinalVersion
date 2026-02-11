@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
+import { environment } from '../../environment/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
-  private authUrl = '/bankapp/authenticate';
+  private authUrl = `${environment.apiBaseUrl}/authenticate`;
 
   constructor(private http: HttpClient) {}
 
